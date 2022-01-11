@@ -1,0 +1,74 @@
+[
+    {
+        "first": "Beth",
+        "last": "Bradford",
+        "school": "Wayne State University" ,
+        "speciality": "Stoke patients Cerebral vascular Accidents 10:16 Dementia, routine reastablishment",
+        "time": 27,
+        "location" : "Assension Health Southfield Mi",
+        "takeInsurance": true,
+        "privatePay": true
+      },
+      {
+        "first": "Nancy",
+        "middle": "Jones",
+        "last": "Broadway",
+        "school": "Cleary College, Eastern Michigan",
+        "speciality": "Clinical Specialist - Pulmonary Rehab, Certified Lymphedema Therapist - Acute Care Management",
+        "time": 30,
+        "location": "University of Michigan, Ann Arbor Michigan ",
+        "takeInsurance": true,
+        "privatePay": true
+      },
+      {
+        "first": "Eugene",
+        "last": "Gersh",
+        "school": "Temple University" ,
+        "speciality": " Hand Therapy, Health Information",
+        "time": 12,
+        "location": "New York University Lingone Health",
+        "takeInsurance": true,
+        "privatePay": true
+      },
+      {
+        "first": "Kim",
+        "last": "Maksout",
+        "school": "Eastern Michigan" ,
+        "speciality": "Neurodevelopmental Treatment Certification (NDT) , Stroke patients, Neuromuscular Rehabilitation, Inpatient Rehabilitation, Performs screening criteria for acute care patients for appropriate placement of Acute Rehabilitation, Skilled Care, Home Health or return to home with no assistance, and LSVT BIG",
+        "time": 39,
+        "location" : "Ascension Health/ Saint Johns Providence, Southfield Mi" ,
+        "takeInsurance": true,
+        "privatePay": true
+      },
+      {
+        "first": "Beth",
+        "last": "Bradford",
+        "school": "Wayne State University" ,
+        "speciality": "Stoke patients Cerebral vascular Accidents 10:16 Dementia, routine reastablishment",
+        "time": 27,
+        "location" : "ASSENSION HEALTH SOURHTIELD MICHIGAN",
+        "takeInsurance": true,
+        "privatePay": true
+      },
+      {
+        "first": "Beth",
+        "last": "Bradford",
+        "school": "Wayne State University" ,
+        "speciality": "Stoke patients Cerebral vascular Accidents 10:16 Dementia, routine reastablishment",
+        "time": 27,
+        "location" : "ASSENSION HEALTH SOURHTIELD MICHIGAN",
+        "takeInsurance": true,
+        "privatePay": true
+      },
+      {
+        "first": "Beth",
+        "last": "Bradford",
+        "school": "Wayne State University" ,
+        "speciality": "Stoke patients Cerebral vascular Accidents 10:16 Dementia, routine reastablishment",
+        "time": 27,
+        "location" : "ASSENSION HEALTH SOURHTIELD MICHIGAN",
+        "takeInsurance": true,
+        "privatePay": true
+      }
+]
+

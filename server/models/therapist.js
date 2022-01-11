@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const therapistSchema = mongoose.Schema({
         first: { 
@@ -19,6 +19,6 @@ const therapistSchema = mongoose.Schema({
 });
 
 
-const student = mongoose.model('therapist', therapistSchema);
+const Therapist = mongoose.model('Therapist', therapistSchema);
 
-export default student;
+module.exports = Therapist;
