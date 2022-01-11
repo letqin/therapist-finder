@@ -17,15 +17,13 @@ export default function Create() {
     const classes = useStyles();
 
     const [student, setStudent] = useState({
-
         regNo: 0,
         studentName: '',
         grade: '',
         section: ''
     });
     
-    const createStudent =() => {
-
+    const createStudent = () => {
         console.log("CLIENT -> " + student);
 
         axios.post('http://localhost:5000/students', student).then( () => {
