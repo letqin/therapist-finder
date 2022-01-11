@@ -3,11 +3,11 @@ import { useQuery } from '@apollo/client';
 
 import ProfileList from '../components/ProfileList';
 
-import { QUERY_PROFILES } from '../utils/queries';
+import { QUERY_THERAPISTS } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_PROFILES);
-  const profiles = data?.profiles || [];
+  const { loading, data } = useQuery(QUERY_THERAPISTS);
+  const therapists = data?.therapists || [];
 
   return (
     <main>
@@ -16,10 +16,19 @@ const Home = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <ProfileList
-              profiles={profiles}
-              title="Here's the current roster of friends..."
-            />
+            therapists.map(therapist => {
+              console.log(therapist)
+              return(
+                <div>
+                  {therapist.first}
+                  {therapist.last}
+                </div>
+              )
+            })
+            // <ProfileList
+            //   profiles={profiles}
+            //   title="Here's the current roster of friends..."
+            // />
           )}
         </div>
       </div>

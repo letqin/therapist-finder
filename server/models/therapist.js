@@ -11,7 +11,7 @@ const therapistSchema = mongoose.Schema({
             type: String,
             required:true
         },
-        speciality: String,
+        specialty: String,
         time: Number,
         location: String,
         takeInsurance: Boolean,

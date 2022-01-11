@@ -19,7 +19,7 @@ const typeDefs = gql`
     first: String!
     middle: String
     last: String!
-    speciality: String
+    specialty: String
     time: Int
     location: String
     takeInsurance: Boolean

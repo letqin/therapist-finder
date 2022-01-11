@@ -29,3 +29,14 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_THERAPISTS = gql`
+  query allTherapists {
+    therapists {
+      first
+      middle
+      last
+      specialty
+    }
+  }
+`
