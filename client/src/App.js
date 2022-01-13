@@ -7,6 +7,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -42,6 +43,7 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
+          <Button variant='outlined'>test</Button>
           <div className="container">
             <Route exact path="/">
               <Home />
