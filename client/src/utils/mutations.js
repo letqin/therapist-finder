@@ -43,3 +43,18 @@ export const REMOVE_SKILL = gql`
     }
   }
 `;
+
+export const ADD_THERAPIST = gql`
+  mutation addTherapist($first: String!, $middle: String, $last: String!, $speciality: String, $time: Int, $location: String, $takeInsurance: Boolean, $privatePay: Boolean) {
+    addTherapist(first: $first, middle: $middle, last: $last, speciality: $speciality, time:  $time, location: $location, takeInsurance: $takeInsurance, privatePay: $privatePay){
+      _id 
+      first 
+      middle
+      last
+      speciality
+      time
+      location
+      takeInsurance
+    } 
+  }
+`

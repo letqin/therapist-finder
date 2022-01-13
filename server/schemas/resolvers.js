@@ -51,7 +51,19 @@ const resolvers = {
       const token = signToken(profile);
       return { token, profile };
     },
+    
+    addTherapist: async (parent, {first, middle, last, speciality, time, location, takeInsurance, privatePay})=>{
+      const therapist = await Therapist.create({first, middle, last, speciality, time, location, takeInsurance, privatePay})
 
+      return therapist
+    },
+
+    deleteTherapist: async (parent, {id}) =>{
+      const therapist = await Therapist.deleteOne({
+        where: {_id: id}
+      })
+      return therapist
+      },
     // Add a third argument to the resolver to access data in our `context`
     addSkill: async (parent, { profileId, skill }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
