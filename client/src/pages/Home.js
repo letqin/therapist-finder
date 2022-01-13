@@ -1,8 +1,12 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
+import TherapistsCard from '../components/therapistsCard'
+
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 import ProfileList from '../components/ProfileList';
-
 import { QUERY_THERAPISTS } from '../utils/queries';
 
 const Home = () => {
@@ -10,19 +14,22 @@ const Home = () => {
   const therapists = data?.therapists || [];
 
   return (
+    
     <main>
-      <div className="flex-row justify-center">
-        <div className="col-12 col-md-10 my-3">
-          {loading ? (
+      
+
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid xs={8}>
+        {loading ? (
             <div>Loading...</div>
           ) : (
             therapists.map(therapist => {
-              console.log(therapist)
+              
               return(
-                <div>
-                  {therapist.first}
-                  {therapist.last}
-                </div>
+                <TherapistsCard data={therapist} />
+
+             
               )
             })
             // <ProfileList
@@ -30,8 +37,19 @@ const Home = () => {
             //   title="Here's the current roster of friends..."
             // />
           )}
-        </div>
-      </div>
+        </Grid>
+        <Grid xs={4}>
+          search form here
+        </Grid>
+       
+    </Grid> 
+    </Box>
+    
+      
+      
+
+          
+      
     </main>
   );
 };
