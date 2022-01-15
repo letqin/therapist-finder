@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 import Logo from '../../images/TherapistFinderProject.png'
+import Box from '@mui/material/Box';
+
 
 const Header = () => {
   const logout = (event) => {
@@ -13,10 +15,13 @@ const Header = () => {
     <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
       <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
         <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
+         {/*  <h1 className="m-0" style={{ fontSize: '3rem' }}>
            TherapistFinder
-          </h1>
-          <img src= {Logo}/>
+          </h1> */}
+          <Box sx={{ margin: 8, ml:4}}>
+          <img src= {Logo} />
+          </Box>
+          
         </Link>
         <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
           Check out your therapist license.
