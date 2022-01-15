@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useQuery } from '@apollo/client';
 import TherapistsCard from '../components/therapistsCard'
 import SearchCard from '../components/searchCard';
@@ -56,11 +56,31 @@ import TextField from '@mui/material/TextField'
 });
  */
 
+
+
+
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THERAPISTS);
   const therapists = data?.therapists || [];
 
 
+  const handleSearchSubmit = () =>{
+  console.log('submitting')
+
+  }
+const [formState, setFormState] = useState({
+  first: "",
+  last:"",
+})
+console.log(formState)
+
+let handleInputChange = (event) =>{
+  console.log(event.target.name, event.target.value)
+  setFormState({
+      ...formState,
+      [event.target.name]: event.target.value
+  })
+}
   return (
     
     <main>
@@ -97,7 +117,11 @@ const Home = () => {
         {loading ? (
             <div>Loading...</div>
           ) : (
-            therapists.map(therapist => {
+            therapists
+            .filter(therapist => {
+              return   therapist.first.includes(formState.first)
+            })
+            .map(therapist => {
               
               return(
                <div>
@@ -114,7 +138,11 @@ const Home = () => {
         </Grid>
         <Grid xs={4}>
           <Box sx={{display:'flex', flexDirection:'column'}}>
-            <SearchCard />
+            <SearchCard 
+            handleSearchSubmit= {handleSearchSubmit}
+            formState= {formState}
+            handleInputChange= {handleInputChange}
+            />
           </Box>
         </Grid>
       </Grid>
