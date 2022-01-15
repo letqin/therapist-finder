@@ -34,6 +34,10 @@ const typeDefs = gql`
     me: Profile
     therapists: [Therapist]!
     therapist(therapistId: ID!): Therapist
+    therapistFirst(firstName: String!): Therapist
+    therapistLast(lastName: String!): Therapist
+    therapistSpecialty(specialty: String!): Therapist
+    therapistLoc(location: String!): Therapist
     # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
    
   }
@@ -42,8 +46,10 @@ const typeDefs = gql`
     addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
-    addTherapist(first: String!, middle: String, last: String!, speciality: String, time: Int, location: String, takeInsurance: Boolean, privatePay: Boolean): Therapist
+    addTherapist(first: String!, middle: String, last: String!, specialty: String, time: Int, location: String, takeInsurance: Boolean, privatePay: Boolean): Therapist
     
+    updateTherapist(id: ID! first: String, middle: String, last: String, specialty: String, time: Int, location: String, takeInsurance: Boolean, privatePay: Boolean): Therapist
+
     deleteTherapist(_id: String!): Therapist
 
     addSkill(profileId: ID!, skill: String!): Profile
