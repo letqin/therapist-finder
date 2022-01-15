@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import TherapistsCard from '../components/therapistsCard'
+import SearchCard from '../components/searchCard';
 import SigninButton from '../components/signinButton' 
 
 /* import { styled } from '@mui/material/styles'; */
@@ -8,14 +9,14 @@ import SigninButton from '../components/signinButton'
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import Button from '@mui/material/Button';
+
 
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 
 import Paper from '@mui/material'; 
-
+import Button from '@mui/material/Button';
   
 import { makeStyles } from '@mui/styles';
 
@@ -101,7 +102,7 @@ const Home = () => {
               return(
                <div>
                 <TherapistsCard data={therapist} />
-                <signinButton />
+                {/* <signinButton /> */}
                 </div>
               )
             })
@@ -112,7 +113,9 @@ const Home = () => {
           )}
         </Grid>
         <Grid xs={4}>
-          search form here
+          <Box sx={{display:'flex', flexDirection:'column'}}>
+            <SearchCard />
+          </Box>
         </Grid>
       </Grid>
     </Box>
