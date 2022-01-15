@@ -19,9 +19,6 @@ import Paper from '@mui/material';
   
 import { makeStyles } from '@mui/styles';
 
-/*  import {ThemeProvider} from '@mui/styles';
-import {createMuiTheme} from '@mui/styles';
-
 import { indigo, gray } from '@mui/material/colors';
 
 /* import ProfileList from '../components/ProfileList'; */

@@ -4,6 +4,7 @@ import {
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
+
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -15,6 +16,10 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {red} from '@mui/material/colors';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -37,8 +42,48 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
+/* const theme = createTheme({
+  palette: {
+    background: {
+      default: '#636aa4',
+      
+    },
+    
+
+    primary: {
+      light: '#71c9e9',
+      main: '#636aa4',
+      dark: '#314b98',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#f99b35',
+      main: '#e06c91',
+      dark: '#58595b',
+      contrastText: '#fff',
+    },
+  },
+}); */
+
+const theme = createTheme({
+  
+  palette: {
+    background: {
+      default:'#636aa4'
+    },
+    primary: {
+      main: '#636aa4',
+    },
+  },
+});
+
+
 function App() {
   return (
+
+    <ThemeProvider theme={theme} > 
+    <CssBaseline />
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
@@ -68,6 +113,7 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+    </ThemeProvider>
   );
 }
 

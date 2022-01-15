@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
+import Logo from '../../images/TherapistFinderProject.png'
 
 const Header = () => {
   const logout = (event) => {
@@ -15,6 +16,7 @@ const Header = () => {
           <h1 className="m-0" style={{ fontSize: '3rem' }}>
            TherapistFinder
           </h1>
+          <img src= {Logo}/>
         </Link>
         <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
           Check out your therapist license.
