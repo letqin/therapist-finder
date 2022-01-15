@@ -27,7 +27,7 @@ const SkillForm = ({ profileId }) => {
 
   return (
     <div>
-      <h4>Endorse some more skills below.</h4>
+      <h4>Add a therapist here.</h4>
 
       {Auth.loggedIn() ? (
         <form
@@ -56,7 +56,7 @@ const SkillForm = ({ profileId }) => {
         </form>
       ) : (
         <p>
-          You need to be logged in to endorse skills. Please{' '}
+          You need to be logged in to add a therapist. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}

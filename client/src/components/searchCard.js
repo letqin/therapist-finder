@@ -11,7 +11,7 @@ const SearchCard = () =>{
             alignItems: 'center',
             m: 2
         }}>
-            <CardContent>Search For a Physical Therapist that meets your needs</CardContent>
+            <CardContent>Search For a Occupational Therapist that meets your needs</CardContent>
             <CardContent 
             component="form"
             sx={{

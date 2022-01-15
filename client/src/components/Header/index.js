@@ -5,6 +5,8 @@ import Button from '@mui/material/Button';
 import Auth from '../../utils/auth';
 import Logo from '../../images/TherapistFinderProject.png'
 import Box from '@mui/material/Box';
+import '@fontsource/roboto/300.css';
+import Typography from '@mui/material/Typography';
 
 /*  import SigninButton from '../signinButton'  */ 
 
@@ -58,6 +60,12 @@ const Header = () => {
             <>
             <Button className="btn btn-lg btn-light m-2" onClick={logout} size= 'large'
               sx= {{
+                margin:3,
+                fontSize: '30',
+                fontWeight: 'bold',
+                fontFamily: 'georgia',
+                width: 160,
+                mr:2,
                 color:'white',
                 backgroundColor: '#636aa4',
                 border: 1,
@@ -69,8 +77,11 @@ const Header = () => {
                 borderRadius: 10,
                 borderColor:'#e06c91',
                 
-              }}}>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
+              }
+              
+                
+                }}>
+              <Link className="btn btn-lg btn-primary m-2"  to = "/login" style={{textDecoration: 'none' }}>
                 Login
               </Link>
               </Button>
@@ -78,6 +89,12 @@ const Header = () => {
               
               <Button className="btn btn-lg btn-light m-2" onClick={logout} size= 'large'
               sx= {{
+                margin:3,
+                fontSize: '30',
+                fontWeight: 'bold',
+                fontFamily: 'georgia',
+                width: 160,
+                mr:8,
                 color:'white',
                 backgroundColor: '#636aa4',
                 border: 1,

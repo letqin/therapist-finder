@@ -19,7 +19,6 @@ import Footer from './components/Footer';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import {red} from '@mui/material/colors';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
