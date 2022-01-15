@@ -1,30 +1,36 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import TherapistsCard from '../components/therapistsCard'
-import signinButton from '../components/signinButton'
+import SigninButton from '../components/signinButton' 
 
-import { styled } from '@mui/material/styles';
+/* import { styled } from '@mui/material/styles'; */
 
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
-import textfield from '@mui/material/textfield';
-import typography from '@mui/material/typography';
 
-import container from '@mui/material/container';
-import Paper from '@mui/material';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 
-import {makeStyles, ThemeProvider, createMuiTheme} from '@mui/material/makeStyles';
+import Paper from '@mui/material'; 
+
+  
+import { makeStyles } from '@mui/styles';
+
+/*  import {ThemeProvider} from '@mui/styles';
+import {createMuiTheme} from '@mui/styles';
 
 import { indigo, gray } from '@mui/material/colors';
 
-import ProfileList from '../components/ProfileList';
+/* import ProfileList from '../components/ProfileList'; */
+
 import { QUERY_THERAPISTS } from '../utils/queries';
+import TextField from '@mui/material/TextField'
 
 
-const useStyles = makeStyles ({
+/* const useStyles = makeStyles ({
   root:{
     background: indigo,
     border: 1,
@@ -33,8 +39,8 @@ const useStyles = makeStyles ({
     padding: '0 30px'
   }
 })
-
-const theme = createTheme({
+ */
+/* const theme = createTheme({
   palette: {
     primary: {
       light: '#71c9e9',
@@ -50,7 +56,7 @@ const theme = createTheme({
     },
   },
 });
-
+ */
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THERAPISTS);
@@ -60,9 +66,9 @@ const Home = () => {
   return (
     
     <main>
-      <ThemeProvider theme={theme}>
+    {/*   <ThemeProvider theme={theme}> */}
 
-      <typography variant="h2">
+      {/* <typography variant="h2">
         Search fot a therapist
       </typography>
 
@@ -79,9 +85,10 @@ const Home = () => {
       variant= 'outlined'
       color= '#e06c91'
       //type="date"
-      />
+      /> */}
       
-    
+    <Container>
+      
     <Box sx={{
            boxShadow: 2,
            bgcolor: '#636aa4', 
@@ -112,8 +119,9 @@ const Home = () => {
         </Grid>
       </Grid>
     </Box>
+    </Container>
              
-    </ThemeProvider>
+    {/* </ThemeProvider> */}
     </main>
   );
 };
