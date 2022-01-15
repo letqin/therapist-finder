@@ -18,3 +18,6 @@ const SigninButton = (props)=> {
     )
 
 }
+
+
+export default SigninButton

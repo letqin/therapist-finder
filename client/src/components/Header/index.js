@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Button from '@mui/material/Button';
 import Auth from '../../utils/auth';
 import Logo from '../../images/TherapistFinderProject.png'
 import Box from '@mui/material/Box';
 
+/*  import SigninButton from '../signinButton'  */ 
 
 const Header = () => {
   const logout = (event) => {
@@ -18,35 +20,88 @@ const Header = () => {
          {/*  <h1 className="m-0" style={{ fontSize: '3rem' }}>
            TherapistFinder
           </h1> */}
-          <Box sx={{ margin: 8, ml:4}}>
+          <Box sx={{
+            margin: 8,
+            pl:4,
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between'
+            }}>
           <img src= {Logo} />
-          </Box>
-          
-        </Link>
-        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
-          Check out your therapist license.
-        </p>
-        <div>
+          <Box>
           {Auth.loggedIn() ? (
             <>
+              
               <Link className="btn btn-lg btn-primary m-2" to="/me">
                 View My Profile
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <Button className="btn btn-lg btn-light m-2" onClick={logout} size= 'large'
+              sx= {{
+                color:'white',
+                backgroundColor: '#636aa4',
+                border: 1,
+                borderRadius: 10,
+                borderColor:'#e06c91',
+              '&:hover': {
+                backgroundColor: '#314b98',
+                border: 1,
+                borderRadius: 10,
+                borderColor:'#e06c91',
+                
+              }}}>
                 Logout
-              </button>
+                
+              </Button>
+
             </>
           ) : (
             <>
+            <Button className="btn btn-lg btn-light m-2" onClick={logout} size= 'large'
+              sx= {{
+                color:'white',
+                backgroundColor: '#636aa4',
+                border: 1,
+                borderRadius: 10,
+                borderColor:'#e06c91',
+              '&:hover': {
+                backgroundColor: '#314b98',
+                border: 1,
+                borderRadius: 10,
+                borderColor:'#e06c91',
+                
+              }}}>
               <Link className="btn btn-lg btn-primary m-2" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              </Button>
+              {/* <SigninButton /> */}
+              
+              <Button className="btn btn-lg btn-light m-2" onClick={logout} size= 'large'
+              sx= {{
+                color:'white',
+                backgroundColor: '#636aa4',
+                border: 1,
+                borderRadius: 10,
+                borderColor:'#e06c91',
+              '&:hover': {
+                backgroundColor: '#314b98',
+                border: 1,
+                borderRadius: 10,
+                borderColor:'#e06c91',
+                
+              }}}>
+                <Link className="btn btn-lg btn-primary m-2" to="/Signup">
                 Signup
-              </Link>
+                </Link>
+              </Button>
+              
             </>
           )}
-        </div>
+        </Box> 
+      </Box>
+          
+        </Link>
+
       </div>
     </header>
   );

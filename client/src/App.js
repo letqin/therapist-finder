@@ -89,9 +89,9 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <Button variant='outlined'>test</Button>
-          <Button variant="outlined" color="error">
+          {/* <Button variant="outlined" color="error">
         Sign In
-    </Button>
+    </Button> */}
           <div className="container">
             <Route exact path="/">
               <Home />
