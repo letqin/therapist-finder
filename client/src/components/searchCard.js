@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-const SearchCard = () =>{
+
+
+
+const SearchCard = (props) =>{
+    console.log(props)
+    
     return (
         <Card sx = {{
             display:'flex',
@@ -20,7 +25,14 @@ const SearchCard = () =>{
             noValidate
             autoComplete="off"
             >
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                <TextField 
+                    id="first" 
+                    label="First Name" 
+                    variant="outlined" 
+                    name= "first"
+                    value={props.formState.first}
+                    onChange={props.handleInputChange}
+                />
             </CardContent>
             <CardContent 
             component="form"
@@ -30,7 +42,14 @@ const SearchCard = () =>{
             noValidate
             autoComplete="off"
             >
-                <TextField id="filled-basic" label="Filled" variant="filled" />
+                <TextField 
+                    id="last" 
+                    label="Last Name" 
+                    variant="outlined" 
+                    name= "last"
+                    value={props.formState.last}
+                    onChange={props.handleInputChange}
+                />
             </CardContent>
             <CardContent 
             component="form"
@@ -53,7 +72,7 @@ const SearchCard = () =>{
                 <TextField id="standard-basic" label="Standard" variant="standard" />
             </CardContent>
             <CardContent>
-                <Button variant>Search</Button>
+                <Button onClick= {props.handleSearchSubmit}>Search</Button>
             </CardContent>
         </Card>
     )

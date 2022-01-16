@@ -71,6 +71,9 @@ const theme = createTheme({
     background: {
       default:'#636aa4'
     },
+    text: {
+      default: "white"
+    },
     primary: {
       main: '#636aa4',
     },
