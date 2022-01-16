@@ -6,7 +6,9 @@ import Auth from '../../utils/auth';
 import Logo from '../../images/TherapistFinderProject.png'
 import Box from '@mui/material/Box';
 import '@fontsource/roboto/300.css';
-import Typography from '@mui/material/Typography';
+import { shadows } from '@mui/system';
+
+//import Typography from '@mui/material/Typography';
 
 /*  import SigninButton from '../signinButton'  */ 
 
@@ -44,6 +46,7 @@ const Header = () => {
                 border: 1,
                 borderRadius: 10,
                 borderColor:'#e06c91',
+                boxShadow:4,
               '&:hover': {
                 backgroundColor: '#314b98',
                 border: 1,
@@ -64,6 +67,7 @@ const Header = () => {
                 fontSize: '30',
                 fontWeight: 'bold',
                 fontFamily: 'georgia',
+                textAlign: 'center',
                 width: 160,
                 mr:2,
                 color:'white',
@@ -93,6 +97,7 @@ const Header = () => {
                 fontSize: '30',
                 fontWeight: 'bold',
                 fontFamily: 'georgia',
+                textAlign: 'center',
                 width: 160,
                 mr:8,
                 color:'white',

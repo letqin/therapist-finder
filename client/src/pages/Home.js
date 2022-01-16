@@ -88,12 +88,27 @@ const Home = () => {
     <Container>
       
     <Box sx={{
-           boxShadow: 2,
+           boxShadow: 4,
            bgcolor: '#636aa4', 
-           color: '#fff', p: 2 }}>
+           color: '#fff',
+           borderRadius:15, 
+           p: 2 }}>
 
       <Grid container spacing={3} justify="center">
-        <Grid xs={8}>
+      <Box sx={{display:'flex', 
+          flexDirection:'column',
+          boxShadow: 4,
+          }}>
+            </Box>
+        <Grid xs={8} p={5}>
+        <Box sx= {{display:'flex', 
+          flexDirection:'column',
+          width: 720,
+          height:740,
+          boxShadow: 15,
+          borderRadius:15, 
+           p: 2
+          }}>
         {loading ? (
             <div>Loading...</div>
           ) : (
@@ -111,9 +126,17 @@ const Home = () => {
             //   title="Here's the current roster of friends..."
             // />
           )}
+          </Box>
         </Grid>
-        <Grid xs={4}>
-          <Box sx={{display:'flex', flexDirection:'column'}}>
+        <Grid xs={4} p={2} mt={3}>
+          <Box sx= {{display:'flex', 
+          flexDirection:'column',
+          width: 300,
+          height:740,
+          boxShadow: 15,
+          borderRadius:10, 
+          p: 1
+          }}>
             <SearchCard />
           </Box>
         </Grid>
