@@ -14,12 +14,16 @@ const SearchCard = (props) =>{
             display:'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            m: 2
+            m: 2,
+            backgroundColor: '#636aa4', 
+            color: '#fff',
+            fontWeight: 'bold',
         }}>
             <CardContent>Search For a Occupational Therapist that meets your needs</CardContent>
             <CardContent 
             component="form"
             sx={{
+            
             '& > :not(style)': { m: 1, width: '25ch' },
             }}
             noValidate
@@ -52,6 +56,7 @@ const SearchCard = (props) =>{
                 />
             </CardContent>
             <CardContent 
+            
             component="form"
             sx={{
             '& > :not(style)': { m: 1, width: '25ch' },
@@ -69,7 +74,7 @@ const SearchCard = (props) =>{
             noValidate
             autoComplete="off"
             >
-                <TextField id="standard-basic" label="Standard" variant="standard" />
+                <TextField id="standard-basic" label="Standard" variant="standard"/>
             </CardContent>
             <CardContent>
                 <Button onClick= {props.handleSearchSubmit}>Search</Button>

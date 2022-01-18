@@ -105,7 +105,7 @@ const Home = () => {
       
     <Box sx={{
            boxShadow: 4,
-           bgcolor: '#636aa4', 
+           backgroundColor: '#636aa4', 
            color: '#fff',
            borderRadius:15, 
            p: 2 }}>

@@ -66,7 +66,15 @@ const client = new ApolloClient({
 }); */
 
 const theme = createTheme({
-  
+  typography:{
+    h1: {
+      fontSize:15
+    },
+    h2 :{
+      
+      fontSize: 7
+    }
+  },
   palette: {
     background: {
       default:'#636aa4'
