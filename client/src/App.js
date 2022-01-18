@@ -85,6 +85,7 @@ const theme = createTheme({
     primary: {
       main: '#636aa4',
     },
+  
   },
 });
 

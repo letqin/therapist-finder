@@ -4,12 +4,15 @@ import TherapistsCard from '../components/therapistsCard'
 import SearchCard from '../components/searchCard';
 import SigninButton from '../components/signinButton' 
 
-/* import { styled } from '@mui/material/styles'; */
 
+
+import Card from '@mui/material/Card';
+/* import { styled } from '@mui/material/styles'; */
+import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import ButtonGroup from '@mui/material/ButtonGroup';
-
+import { useTheme } from '@mui/styles';
 
 /* import Typography from '@mui/material/Typography'; */
 import Container from '@mui/material/Container';
@@ -60,6 +63,8 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_THERAPISTS);
   const therapists = data?.therapists || [];
 
+  const theme = useTheme();
+
   const handleSearchSubmit = () =>{
     console.log('submitting')
   
@@ -105,7 +110,7 @@ const Home = () => {
       
     <Box sx={{
            boxShadow: 4,
-           backgroundColor: '#636aa4', 
+           backgroundColor: theme.palette.primary, 
            color: '#fff',
            borderRadius:15, 
            p: 2 }}>
@@ -117,35 +122,40 @@ const Home = () => {
           }}>
             </Box>
         <Grid xs={8} p={5}>
-        <Box sx= {{display:'flex', 
+        <Card >
+            <CardContent>
+              <Box sx= {{display:'flex',
+              backgroundColor: '#636aa4',
           flexDirection:'column',
           width: 720,
           height:740,
           boxShadow: 15,
           borderRadius:15, 
           paddingBottom:50,
-          }}>
-        {loading ? (
-            <div>Loading...</div>
-          ) : (
-            therapists
-            .filter(therapist => {
-              return   therapist.first.includes(formState.first)
-            })
-            .map((therapist, i) => {
-              const isFirst= i === 0
-              const isLast= i === therapists.length -1
+          }} >
+              {loading ? (
+                  <div>Loading...</div>
+                ) : (
+                  therapists
+                  .filter(therapist => {
+                    return   therapist.first.includes(formState.first)
+                  })
+                  .map((therapist, i) => {
+                    const isFirst= i === 0
+                    const isLast= i === therapists.length -1
 
-              return(
-               <div>
-                <TherapistsCard isFirst ={isFirst} isLast={isLast} data={therapist} />
+                    return(
+                    <div>
+                      <TherapistsCard isFirst ={isFirst} isLast={isLast} data={therapist} />
 
-                </div>
-              )
-            })
+                      </div>
+                    )
+                  })
 
-          )}
-          </Box>
+                )}
+              </Box>
+          </CardContent>
+        </Card>
         </Grid>
         <Grid xs={4} p={2} mt={3}>
           <Box sx= {{display:'flex', 

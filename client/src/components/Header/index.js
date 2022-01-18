@@ -32,7 +32,7 @@ const Header = () => {
             flexDirection: 'row',
             justifyContent: 'space-between'
             }}>
-          <img src= {Logo} alt="therapistfinderlogo"/>
+          <img src= {Logo} alt="Therapist Finder Logo"/>
           <Box>
           {Auth.loggedIn() ? (
             <>

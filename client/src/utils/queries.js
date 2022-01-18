@@ -40,3 +40,9 @@ export const QUERY_THERAPISTS = gql`
     }
   }
 `
+
+// export const QUERY_THERAPISTS = gql`
+// therapist($therapistId: ID!){
+//     therapist
+//   }
+// `

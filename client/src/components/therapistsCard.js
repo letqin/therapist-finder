@@ -27,6 +27,7 @@ const TherapistsCard = (props)=> {
             elevation={0}
             sx={{ 
             /* minWidth: 250, */ 
+            display: "flex",
             borderRadius:borderRadiusTop , 
             backgroundColor: '#636aa4',
             color: 'white',
