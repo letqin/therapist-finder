@@ -16,6 +16,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import TherapistPage from './pages/therapistPage'
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -121,6 +122,9 @@ function App() {
             </Route>
             <Route exact path="/profiles/:profileId">
               <Profile />
+            </Route>
+            <Route exact path="/therapistPage">
+              <TherapistPage />
             </Route>
           </div>
           <Footer />
