@@ -85,53 +85,35 @@ const Home = () => {
   return (
     
     <main>
-    {/*   <ThemeProvider theme={theme}> */}
-
-      {/* <typography variant="h2">
-        Search fot a therapist
-      </typography>
-
-      <buttonGroup variant="contained" color= '#58595b' size="medium">
-        <button>
-        SignIn
-        </button>
-        <button>
-        Sign Out
-        </button>
-      </buttonGroup>
-
-      <textfield 
-      variant= 'outlined'
-      color= '#e06c91'
-      //type="date"
-      /> */}
       
     <Container>
       
     <Box sx={{
-           boxShadow: 4,
+           boxShadow: 12,
            backgroundColor: theme.palette.primary, 
            color: '#fff',
            borderRadius:15, 
            p: 2 }}>
 
       <Grid container spacing={3} justify="center">
-      <Box sx={{display:'flex', 
+      <Box sx={{
+          /* display:'flex', 
           flexDirection:'column',
-          boxShadow: 4,
+          boxShadow: 8,
+          backgroundColor:'#636aa4' */
           }}>
-            </Box>
+            </Box> 
         <Grid xs={8} p={5}>
-        <Card >
+        <Card>
             <CardContent>
-              <Box sx= {{display:'flex',
+              <Box sx= {{
+              display:'flex',
               backgroundColor: '#636aa4',
-          flexDirection:'column',
-          width: 720,
-          height:740,
-          boxShadow: 15,
-          borderRadius:15, 
-          paddingBottom:50,
+              flexDirection:'column',
+              width: 660,
+              height:740,
+              boxShadow: 15,
+              borderRadius:15, 
           }} >
               {loading ? (
                   <div>Loading...</div>
@@ -158,13 +140,14 @@ const Home = () => {
         </Card>
         </Grid>
         <Grid xs={4} p={2} mt={3}>
-          <Box sx= {{display:'flex', 
-          flexDirection:'column',
-          width: 300,
-          height:740,
-          boxShadow: 10,
-          borderRadius:10, 
-          p: 1
+          <Box sx= {{
+            display:'flex', 
+            flexDirection:'column',
+            width: 300,
+            height:760,
+            boxShadow: 10,
+            borderRadius:10, 
+            p: 1
           }}>
             <SearchCard             
             handleSearchSubmit= {handleSearchSubmit}
@@ -176,7 +159,7 @@ const Home = () => {
     </Box>
     </Container>
              
-    {/* </ThemeProvider> */}
+
     </main>
   );
 };

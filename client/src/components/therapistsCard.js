@@ -13,7 +13,7 @@ const TherapistsCard = (props)=> {
     let borderRadiusButtom = null
 
     if (props.isFirst){
-        borderRadiusTop = "15px 15px 0 0"
+        borderRadiusTop = "100px 100px 0 0"
 
     }
     else if (props.isLast){
