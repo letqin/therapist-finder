@@ -89,11 +89,23 @@ const SearchCard = (props) =>{
                 <Button
                 /* className="btn btn-lg btn-light m-2" */
                 onClick= {props.handleSearchSubmit}
-                size='large'
-                sx={{
-                    /* border:'1px',
-                    bordercolor:'#e06c91', */
-                }}>Search</Button>
+                
+              sx= {{
+                width: '200px',
+                marginTop: '30px',
+                color:'white',
+                backgroundColor: '#e06c91',
+                border: 1,
+                borderRadius: '7px',
+                borderColor:'#e06c91',
+                boxShadow: '3',
+              '&:hover': {
+                backgroundColor: '#636aa4',
+                border: 1,
+                borderRadius: 10,
+                borderColor:'#e06c91',
+                
+              }}}>Search</Button>
             </CardContent>
         </Card>
     )

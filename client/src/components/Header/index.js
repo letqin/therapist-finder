@@ -38,21 +38,22 @@ const Header = () => {
           {Auth.loggedIn() ? (
             <>
               
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
+              <Link className="btn btn-lg btn-primary m-2" underline="none" to="/me">
                 View My Profile
               </Link>
+
               <Button className="btn btn-lg btn-light m-2" onClick={logout} size= 'large'
               sx= {{
                 color:'white',
                 backgroundColor: '#e06c91',
                 border: 1,
-                borderRadius: 10,
+                borderRadius: '7px',
                 borderColor:'#e06c91',
                 boxShadow: '3',
               '&:hover': {
                 backgroundColor: '#636aa4',
                 border: 1,
-                borderRadius: 10,
+                borderRadius: '7px',
                 borderColor:'#e06c91',
                 
               }}}>
@@ -75,13 +76,11 @@ const Header = () => {
                 color:'#fff',
                 backgroundColor: '#e06c91',
                 border: 1,
-                borderRadius: 10,
+                borderRadius: '7px',
                 borderColor:'#e06c91',
                 boxShadow: '3',
               '&:hover': {
                 backgroundColor: '#636aa4',
-                border: 1,
-                borderRadius: 10,
                 borderColor:'#e06c91',
                 
               }
@@ -89,7 +88,7 @@ const Header = () => {
                 
                 }}>
               <Link className="btn btn-lg btn-primary m-2"  to = "/login" style={{textDecoration: 'none' }}>
-                Login
+                LOG IN
               </Link>
               </Button>
               {/* <SigninButton /> */}
@@ -117,7 +116,7 @@ const Header = () => {
                 
               }}}>
                 <Link className="btn btn-lg btn-primary m-2" to="/Signup">
-                Signup
+                SIGN UP
                 </Link>
               </Button>
               

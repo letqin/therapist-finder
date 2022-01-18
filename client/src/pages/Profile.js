@@ -10,6 +10,7 @@ import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
 
+
 const Profile = () => {
   const { profileId } = useParams();
 
@@ -35,16 +36,38 @@ const Profile = () => {
 
   if (!profile?.name) {
     return (
-      <h4>
-        You need to be logged in to see your profile page. Use the navigation
+      
+      <h4 
+      style={{ 
+        marginLeft: '500px',
+        width: '800px',
+        paddingLeft: '1000',
+        paddingTop: '20px',
+        fontSize: '24px',
+        color: '#fff',
+        fontWeight: 'Normal',
+      }}>
+
+        You need to be logged in to see your profile page.
+        Use the navigation
         links above to sign up or log in!
       </h4>
+      
     );
   }
 
   return (
     <div>
-      <h2 className="card-header">
+      <h2 className="card-header"
+      style={{ 
+        marginLeft: '500px',
+        width: '800px',
+        paddingLeft: '1000',
+        paddingTop: '20px',
+        fontSize: '24px',
+        color: '#fff',
+        fontWeight: 'Normal',
+      }}>
         {profileId ? `${profile.name}'s` : 'Your'} friends have endorsed these
         skills...
       </h2>
