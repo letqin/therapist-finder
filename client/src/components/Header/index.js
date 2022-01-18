@@ -105,13 +105,13 @@ const Header = () => {
                 color:'#fff',
                 backgroundColor: '#e06c91',
                 border: 1,
-                borderRadius: 10,
+                borderRadius: '7px',
                 borderColor:'#e06c91',
                 boxShadow: '3',
               '&:hover': {
                 backgroundColor: '#636aa4',
                 border: 1,
-                borderRadius: 10,
+                borderRadius: '7px',
                 borderColor:'#e06c91',
                 
               }}}>
