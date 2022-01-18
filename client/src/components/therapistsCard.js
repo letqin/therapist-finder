@@ -14,12 +14,9 @@ const TherapistsCard = (props)=> {
 
     if (props.isFirst){
         borderRadiusTop = "100px 100px 0 0"
-
     }
     else if (props.isLast){
         borderRadiusButtom = "0 0 15px 15px"
-
-
     }
 
     return (
@@ -31,7 +28,9 @@ const TherapistsCard = (props)=> {
             borderRadius:borderRadiusTop , 
             backgroundColor: '#636aa4',
             color: 'white',
-            p:2
+            paddingLeft: '20px',
+            paddingTop: '20px',
+            
             }}
             >
             <CardContent>
@@ -41,9 +40,10 @@ const TherapistsCard = (props)=> {
                 borderRadius:borderRadiusButtom
             }}>
                 <Button
+                
                 /* variant='text' 
                 color= 'white' 
-                size="small" */ 
+                fontSize= '10px' */
                 >
                     Learn More
                 </Button>

@@ -6,6 +6,11 @@ import { ADD_PROFILE } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
+import Container from '@mui/material/Container';
+
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+
 const Signup = () => {
   const [formState, setFormState] = useState({
     name: '',
@@ -41,10 +46,26 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <Container sx={{
+      height:"300px",
+      boxShadow: 12,
+      backgroundColor:'#636aa4',
+      borderRadius:15, 
+      p: 2 
+      }}> 
+   {/* <main className="flex-row justify-center mb-4"> */}
+      
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+
+          <h4 className="card-header text-light ml-5 p-2"
+          style={{ 
+            paddingLeft: '10px',
+            paddingTop: '10px',
+            color:'white',
+            fontSize: '30px',
+
+          }}> SIGN UP </h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -52,12 +73,21 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
+              
               <form onSubmit={handleFormSubmit}>
                 <input
+                
                   className="form-input"
                   placeholder="Your username"
                   name="name"
                   type="text"
+                  style={{ 
+                    width: '320px',
+                    height: '50px',
+                    color:'block',
+                    paddingLeft: '15px',
+                    
+                  }}
                   value={formState.name}
                   onChange={handleChange}
                 />
@@ -66,6 +96,12 @@ const Signup = () => {
                   placeholder="Your email"
                   name="email"
                   type="email"
+                  style={{ 
+                    width: '320px',
+                    height: '50px',
+                    color:'block',
+                    paddingLeft: '15px',
+                  }}
                   value={formState.email}
                   onChange={handleChange}
                 />
@@ -74,17 +110,32 @@ const Signup = () => {
                   placeholder="******"
                   name="password"
                   type="password"
+                  style={{ 
+                    width: '310px',
+                    height: '50px',
+                    color:'block',
+                    paddingLeft: '15px',
+                  }}
                   value={formState.password}
                   onChange={handleChange}
                 />
                 <button
                   className="btn btn-block btn-info"
-                  style={{ cursor: 'pointer' }}
+                  style={{ 
+                    cursor: 'pointer',
+                    width: '200px',
+                    height: '50px',
+                    color:'block',
+                    fontWeight: 'bold',
+                    paddingLeft: '15px',
+
+                 }}
                   type="submit"
                 >
                   Submit
                 </button>
               </form>
+             
             )}
 
             {error && (
@@ -95,8 +146,13 @@ const Signup = () => {
           </div>
         </div>
       </div>
-    </main>
+      
+  {/* </main> */}
+
+   </Container>
+    
   );
 };
 
 export default Signup;
+

@@ -30,17 +30,6 @@ import { indigo, gray } from '@mui/material/colors'; */
 import { QUERY_THERAPISTS } from '../utils/queries';
 /* import TextField from '@mui/material/TextField' */
 
-
-/* const useStyles = makeStyles ({
-  root:{
-    background: indigo,
-    border: 1,
-    borderRadius: 15,
-    color: 'white',
-    padding: '0 30px'
-  }
-})
- */
 /* const theme = createTheme({
   palette: {
     primary: {

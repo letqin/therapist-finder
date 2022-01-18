@@ -16,20 +16,23 @@ const SearchCard = (props) =>{
             alignItems: 'center',
             m: 2,
             backgroundColor: '#636aa4', 
-            color: '#fff',
             fontWeight: 'bold',
-        }}>
-            <CardContent>Search For a Occupational Therapist that meets your needs</CardContent>
-            <CardContent 
-            component="form"
-            sx={{
+            height:740,
+            color: '#fff',
             
+        }}>
+            <CardContent> Search For a Occupational Therapist that meets your needs 
+            </CardContent>
+            <CardContent 
+            component= "form"
+            sx={{
             '& > :not(style)': { m: 1, width: '25ch' },
             }}
             noValidate
             autoComplete="off"
+            
             >
-                <TextField 
+                <TextField
                     id="first" 
                     label="First Name" 
                     variant="outlined" 
@@ -64,7 +67,10 @@ const SearchCard = (props) =>{
             noValidate
             autoComplete="off"
             >
-                <TextField id="standard-basic" label="Standard" variant="standard" />
+                <TextField 
+                id="standard-basic" 
+                label="Standard" 
+                variant="standard" />
             </CardContent>
             <CardContent 
             component="form"
@@ -74,10 +80,20 @@ const SearchCard = (props) =>{
             noValidate
             autoComplete="off"
             >
-                <TextField id="standard-basic" label="Standard" variant="standard"/>
+                <TextField 
+                id="standard-basic" l
+                abel="Standard" 
+                variant="standard"/>
             </CardContent>
             <CardContent>
-                <Button onClick= {props.handleSearchSubmit}>Search</Button>
+                <Button
+                /* className="btn btn-lg btn-light m-2" */
+                onClick= {props.handleSearchSubmit}
+                size='large'
+                sx={{
+                    /* border:'1px',
+                    bordercolor:'#e06c91', */
+                }}>Search</Button>
             </CardContent>
         </Card>
     )
