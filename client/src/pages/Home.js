@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState}from 'react';
 import { useQuery } from '@apollo/client';
 import TherapistsCard from '../components/therapistsCard'
 import SearchCard from '../components/searchCard';
@@ -60,7 +60,23 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_THERAPISTS);
   const therapists = data?.therapists || [];
 
-
+  const handleSearchSubmit = () =>{
+    console.log('submitting')
+  
+    }
+  const [formState, setFormState] = useState({
+    first: "",
+    last:"",
+  })
+  console.log(formState)
+  
+  let handleInputChange = (event) =>{
+    console.log(event.target.name, event.target.value)
+    setFormState({
+        ...formState,
+        [event.target.name]: event.target.value
+    })
+  }
   return (
     
     <main>
@@ -117,14 +133,10 @@ const Home = () => {
               return(
                <div>
                 <TherapistsCard data={therapist} />
-                {/* <signinButton /> */}
                 </div>
               )
             })
-            // <ProfileList
-            //   profiles={profiles}
-            //   title="Here's the current roster of friends..."
-            // />
+
           )}
           </Box>
         </Grid>
@@ -137,7 +149,10 @@ const Home = () => {
           borderRadius:10, 
           p: 1
           }}>
-            <SearchCard />
+            <SearchCard             
+            handleSearchSubmit= {handleSearchSubmit}
+            formState= {formState}
+            handleInputChange= {handleInputChange}/>
           </Box>
         </Grid>
       </Grid>
