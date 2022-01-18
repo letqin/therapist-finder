@@ -107,6 +107,9 @@ function App() {
             <Route exact path="/me">
               <Profile />
             </Route>
+            <Route exact path="/therapistProfile">
+              <Profile />
+            </Route>
             <Route exact path="/profiles/:profileId">
               <Profile />
             </Route>
