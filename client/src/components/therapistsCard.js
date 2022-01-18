@@ -4,18 +4,30 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import '@fontsource/roboto/300.css';
 
 
 const TherapistsCard = (props)=> {
     console.log(props)
 
     return (
-        <Card sx={{ minWidth: 275 }}>
+        <Card sx={{ 
+            /* minWidth: 250, */ 
+            bgcolor: '#636aa4',
+            color: 'white',
+            }}
+            >
             <CardContent>
                 <Typography>{props.data.first}{props.data.last}</Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" >Learn More</Button>
+                <Button
+                /* variant='text' 
+                color= 'white' 
+                size="small" */ 
+                >
+                    Learn More
+                </Button>
             </CardActions>
         </Card>
     )

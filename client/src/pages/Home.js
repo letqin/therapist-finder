@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useQuery } from '@apollo/client';
 import TherapistsCard from '../components/therapistsCard'
 import SearchCard from '../components/searchCard';
@@ -11,21 +11,21 @@ import Box from '@mui/material/Box';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
 
-import Typography from '@mui/material/Typography';
+/* import Typography from '@mui/material/Typography'; */
 import Container from '@mui/material/Container';
 
 
-import Paper from '@mui/material'; 
+/* import Paper from '@mui/material'; 
 import Button from '@mui/material/Button';
   
 import { makeStyles } from '@mui/styles';
 
-import { indigo, gray } from '@mui/material/colors';
+import { indigo, gray } from '@mui/material/colors'; */
 
 /* import ProfileList from '../components/ProfileList'; */
 
 import { QUERY_THERAPISTS } from '../utils/queries';
-import TextField from '@mui/material/TextField'
+/* import TextField from '@mui/material/TextField' */
 
 
 /* const useStyles = makeStyles ({
@@ -56,31 +56,11 @@ import TextField from '@mui/material/TextField'
 });
  */
 
-
-
-
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THERAPISTS);
   const therapists = data?.therapists || [];
 
 
-  const handleSearchSubmit = () =>{
-  console.log('submitting')
-
-  }
-const [formState, setFormState] = useState({
-  first: "",
-  last:"",
-})
-console.log(formState)
-
-let handleInputChange = (event) =>{
-  console.log(event.target.name, event.target.value)
-  setFormState({
-      ...formState,
-      [event.target.name]: event.target.value
-  })
-}
   return (
     
     <main>
@@ -108,20 +88,31 @@ let handleInputChange = (event) =>{
     <Container>
       
     <Box sx={{
-           boxShadow: 2,
+           boxShadow: 4,
            bgcolor: '#636aa4', 
-           color: '#fff', p: 2 }}>
+           color: '#fff',
+           borderRadius:15, 
+           p: 2 }}>
 
       <Grid container spacing={3} justify="center">
-        <Grid xs={8}>
+      <Box sx={{display:'flex', 
+          flexDirection:'column',
+          boxShadow: 4,
+          }}>
+            </Box>
+        <Grid xs={8} p={5}>
+        <Box sx= {{display:'flex', 
+          flexDirection:'column',
+          width: 720,
+          height:740,
+          boxShadow: 15,
+          borderRadius:15, 
+           p: 2
+          }}>
         {loading ? (
             <div>Loading...</div>
           ) : (
-            therapists
-            .filter(therapist => {
-              return   therapist.first.includes(formState.first)
-            })
-            .map(therapist => {
+            therapists.map(therapist => {
               
               return(
                <div>
@@ -135,14 +126,18 @@ let handleInputChange = (event) =>{
             //   title="Here's the current roster of friends..."
             // />
           )}
+          </Box>
         </Grid>
-        <Grid xs={4}>
-          <Box sx={{display:'flex', flexDirection:'column'}}>
-            <SearchCard 
-            handleSearchSubmit= {handleSearchSubmit}
-            formState= {formState}
-            handleInputChange= {handleInputChange}
-            />
+        <Grid xs={4} p={2} mt={3}>
+          <Box sx= {{display:'flex', 
+          flexDirection:'column',
+          width: 300,
+          height:740,
+          boxShadow: 10,
+          borderRadius:10, 
+          p: 1
+          }}>
+            <SearchCard />
           </Box>
         </Grid>
       </Grid>
