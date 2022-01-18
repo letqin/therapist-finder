@@ -9,18 +9,36 @@ import Typography from '@mui/material/Typography';
 
 const TherapistsCard = (props)=> {
     console.log(props)
+    let borderRadiusTop = null
+    let borderRadiusButtom = null
+
+    if (props.isFirst){
+        borderRadiusTop = "15px 15px 0 0"
+
+    }
+    else if (props.isLast){
+        borderRadiusButtom = "0 0 15px 15px"
+
+
+    }
 
     return (
-        <Card sx={{ 
+        <Card 
+            elevation={0}
+            sx={{ 
             /* minWidth: 250, */ 
-            bgcolor: '#636aa4',
+            borderRadius:borderRadiusTop , 
+            backgroundColor: '#636aa4',
             color: 'white',
             }}
             >
             <CardContent>
                 <Typography>{props.data.first}{props.data.last}</Typography>
             </CardContent>
-            <CardActions>
+            <CardActions sx={{
+                borderRadius:borderRadiusButtom
+
+            }}>
                 <Button
                 /* variant='text' 
                 color= 'white' 

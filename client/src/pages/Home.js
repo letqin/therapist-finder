@@ -123,16 +123,23 @@ const Home = () => {
           height:740,
           boxShadow: 15,
           borderRadius:15, 
-           p: 2
+          paddingBottom:50,
           }}>
         {loading ? (
             <div>Loading...</div>
           ) : (
-            therapists.map(therapist => {
-              
+            therapists
+            .filter(therapist => {
+              return   therapist.first.includes(formState.first)
+            })
+            .map((therapist, i) => {
+              const isFirst= i === 0
+              const isLast= i === therapists.length -1
+
               return(
                <div>
-                <TherapistsCard data={therapist} />
+                <TherapistsCard isFirst ={isFirst} isLast={isLast} data={therapist} />
+
                 </div>
               )
             })
