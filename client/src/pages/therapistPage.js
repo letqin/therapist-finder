@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-
+import HealthAndSafetyIcon from "@mui/icon-materials/HealthAndSafety"
 import { useQuery } from '@apollo/client';
 import { QUERY_THERAPISTS } from '../utils/queries';
 
@@ -14,7 +14,7 @@ let TherapistPage = () => {
         <main>
             <Grid container spacing={2}>
                 <Grid  xs={8}>
-
+                <HealthAndSafetyIcon />
                 </Grid>
                 <Grid xs={4}>
                     
@@ -23,12 +23,12 @@ let TherapistPage = () => {
                             <div>Loading...</div>
                         ) : (
                             
-                                    <>
-                                        <Typography variant="h1">{therapists[0]}</Typography>
-                                        <Typography variant="h1"></Typography>
-                                        <Typography variant="h1"></Typography>
-                                        <Typography variant="h1"></Typography>
-                                    </> 
+                            <>
+                            <Typography variant="h1">{therapists[0]}</Typography>                                
+                            <Typography variant="h1"></Typography>
+                            <Typography variant="h1"></Typography>
+                            <Typography variant="h1"></Typography>
+                            </> 
                         )
                     }
                 </Grid>

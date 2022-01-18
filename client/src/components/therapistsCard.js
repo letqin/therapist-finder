@@ -37,10 +37,9 @@ const TherapistsCard = (props)=> {
                 <Typography variant= "h1">{props.data.first} {props.data.last}</Typography>
             </CardContent>
             <CardActions sx={{
-                borderRadius:borderRadiusButtom
+                 borderRadius: borderRadiusButtom
             }}>
                 <Button
-                
                 /* variant='text' 
                 color= 'white' 
                 fontSize= '10px' */

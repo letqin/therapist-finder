@@ -94,7 +94,7 @@ const Home = () => {
             </Box> 
         <Grid xs={8} p={5}>
         <Card>
-            <CardContent>
+            <CardContent sx = {{backgroundColor:  '#636aa4'}}>
               <Box sx= {{
               display:'flex',
               backgroundColor: '#636aa4',
