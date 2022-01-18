@@ -50,7 +50,7 @@ const Signup = () => {
       height:"300px",
       marginTop: "30px",
       boxShadow: 12,
-      backgroundColor:'#636aa4',
+      backgroundColor:'#314b98',
       borderRadius:15, 
       p: 2 
       }}> 

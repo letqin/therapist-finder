@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import { Container } from '@mui/material';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -41,10 +42,29 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <Container sx={{
+      height:"300px",
+      marginTop: "30px",
+      boxShadow: 12,
+      backgroundColor:'#62667f',
+      borderRadius:15, 
+      p: 2 
+      }}> 
+    
+    
+    {/* <main className="flex-row justify-center mb-4"> */}
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+          <h4 className="card-header bg-dark text-light p-2"
+          style={{ 
+            paddingLeft: '10px',
+            paddingTop: '10px',
+            color:'white',
+            fontSize: '30px',
+
+          }}
+          
+          >LOGIN</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -58,6 +78,12 @@ const Login = (props) => {
                   placeholder="Your email"
                   name="email"
                   type="email"
+                  style={{ 
+                    width: '460px',
+                    height: '50px',
+                    color:'block',
+                    paddingLeft: '15px',
+                  }}
                   value={formState.email}
                   onChange={handleChange}
                 />
@@ -66,12 +92,25 @@ const Login = (props) => {
                   placeholder="******"
                   name="password"
                   type="password"
+                  style={{ 
+                    width: '460px',
+                    height: '50px',
+                    color:'block',
+                    paddingLeft: '15px',
+                  }}
                   value={formState.password}
                   onChange={handleChange}
                 />
                 <button
                   className="btn btn-block btn-info"
-                  style={{ cursor: 'pointer' }}
+                  style={{ 
+                    cursor: 'pointer',
+                    width: '200px',
+                    height: '50px',
+                    color:'block',
+                    fontWeight: 'bold',
+                    paddingLeft: '15px',
+                 }}
                   type="submit"
                 >
                   Submit
@@ -87,7 +126,8 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-    </main>
+    {/* </main> */}
+    </Container>
   );
 };
 
