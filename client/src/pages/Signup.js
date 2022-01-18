@@ -48,6 +48,7 @@ const Signup = () => {
   return (
     <Container sx={{
       height:"300px",
+      marginTop: "30px",
       boxShadow: 12,
       backgroundColor:'#636aa4',
       borderRadius:15, 
@@ -86,7 +87,6 @@ const Signup = () => {
                     height: '50px',
                     color:'block',
                     paddingLeft: '15px',
-                    
                   }}
                   value={formState.name}
                   onChange={handleChange}
@@ -128,7 +128,6 @@ const Signup = () => {
                     color:'block',
                     fontWeight: 'bold',
                     paddingLeft: '15px',
-
                  }}
                   type="submit"
                 >
