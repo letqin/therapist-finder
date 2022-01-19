@@ -123,7 +123,7 @@ function App() {
             <Route exact path="/profiles/:profileId">
               <Profile />
             </Route>
-            <Route exact path="/therapistPage">
+            <Route exact path="/therapistPage/:therapistId">
               <TherapistPage />
             </Route>
           </div>

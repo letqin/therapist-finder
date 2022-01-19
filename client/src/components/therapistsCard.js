@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';    
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -8,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 
 const TherapistsCard = (props)=> {
-    console.log(props)
+    console.log(props.data)
     let borderRadiusTop = null
     let borderRadiusButtom = null
 
@@ -34,7 +35,10 @@ const TherapistsCard = (props)=> {
             }}
             >
             <CardContent>
-                <Typography variant= "h1">{props.data.first} {props.data.last}</Typography>
+                <Link className="btn btn-lg btn-primary m-2" underline="none" to={"/therapistPage/" + props.data._id}>
+
+                    <Typography variant= "h1">{props.data.first} {props.data.last}</Typography>
+                </Link>
             </CardContent>
             <CardActions sx={{
                  borderRadius: borderRadiusButtom

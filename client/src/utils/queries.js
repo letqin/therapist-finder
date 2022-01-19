@@ -33,16 +33,26 @@ export const QUERY_ME = gql`
 export const QUERY_THERAPISTS = gql`
   query allTherapists {
     therapists {
+      _id
       first
       middle
       last
       specialty
+      location
     }
   }
 `
 
-// export const QUERY_THERAPISTS = gql`
-// therapist($therapistId: ID!){
-//     therapist
-//   }
-// `
+export const QUERY_THERAPIST = gql`
+query therapist($therapistId: ID!){
+    therapist(therapistId: $therapistId){
+      first 
+      middle
+      last
+      specialty
+      location
+      takeInsurance
+      privatePay
+    }
+  }
+`
