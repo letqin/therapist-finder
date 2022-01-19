@@ -26,10 +26,11 @@ const Header = () => {
            TherapistFinder
           </h1> */}
           <Box sx={{
-            marginTop: '100px',
-            marginLeft:'260px',
-            marginRight: '220px',
-            display: 'flex',
+            mr:10,
+            marginTop: '3%',
+            width: '100%',
+            height: '100%',
+            display: 'inline-flex',
             flexDirection: 'row',
             justifyContent: 'space-between'
             }}>
@@ -50,7 +51,7 @@ const Header = () => {
                 borderRadius: '7px',
                 borderColor:'#e06c91',
                 boxShadow: '3',
-              '&:hover': {
+                '&:hover': {
                 backgroundColor: '#636aa4',
                 border: 1,
                 borderRadius: '7px',
@@ -66,7 +67,36 @@ const Header = () => {
             <>
             <Button className="btn btn-lg btn-light m-2" onClick={logout} size= 'large'
               sx= {{
-                margin:3,
+                margin: 3,
+                fontSize: '30',
+                fontWeight: 'bold',
+                fontFamily: 'georgia',
+                textAlign: 'center',
+                width: 160,
+                mr: 2,
+                color:'#fff',
+                backgroundColor: '#e06c91',
+                border: 1,
+                borderRadius: '7px',
+                borderColor:'#e06c91',
+                boxShadow: '3',
+                '&:hover': {
+                backgroundColor: '#636aa4',
+                borderColor:'#e06c91',
+                
+              }
+              
+                
+                }}>
+              <Link className="btn btn-lg btn-primary m-2"  to = "/login" style={{textDecoration: 'none' }}>
+                Log In
+              </Link>
+              </Button>
+              {/* <SigninButton /> */}
+              
+              <Button onClick={logout} size= 'large'
+              sx= {{
+                margin: 3,
                 fontSize: '30',
                 fontWeight: 'bold',
                 fontFamily: 'georgia',
@@ -79,44 +109,15 @@ const Header = () => {
                 borderRadius: '7px',
                 borderColor:'#e06c91',
                 boxShadow: '3',
-              '&:hover': {
-                backgroundColor: '#636aa4',
-                borderColor:'#e06c91',
-                
-              }
-              
-                
-                }}>
-              <Link className="btn btn-lg btn-primary m-2"  to = "/login" style={{textDecoration: 'none' }}>
-                LOG IN
-              </Link>
-              </Button>
-              {/* <SigninButton /> */}
-              
-              <Button className="btn btn-lg btn-light m-2" onClick={logout} size= 'large'
-              sx= {{
-                margin:3,
-                fontSize: '30',
-                fontWeight: 'bold',
-                fontFamily: 'georgia',
-                textAlign: 'center',
-                width: 160,
-                mr:2,
-                color:'#fff',
-                backgroundColor: '#e06c91',
-                border: 1,
-                borderRadius: 10,
-                borderColor:'#e06c91',
-                boxShadow: '3',
-              '&:hover': {
+                '&:hover': {
                 backgroundColor: '#636aa4',
                 border: 1,
-                borderRadius: 10,
+                borderRadius: '7px',
                 borderColor:'#e06c91',
                 
               }}}>
-                <Link className="btn btn-lg btn-primary m-2" to="/Signup">
-                SIGN UP
+                <Link  to="/Signup">
+                Sign Up
                 </Link>
               </Button>
               
