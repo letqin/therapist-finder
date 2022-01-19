@@ -3,6 +3,8 @@ import { useMutation } from '@apollo/client';
 
 import { REMOVE_SKILL } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const SkillsList = ({ skills, isLoggedInUser = false }) => {
   const [removeSkill, { error }] = useMutation(REMOVE_SKILL, {
@@ -29,7 +31,17 @@ const SkillsList = ({ skills, isLoggedInUser = false }) => {
   };
 
   if (!skills.length) {
-    return <h3>No Skills Yet</h3>;
+    return <h3 
+    style={{ 
+      marginLeft:'500px',
+      padding:'5px',
+      paddingLeft: '1000',
+      paddingTop: '20px',
+      fontSize: '18px',
+      fontWeight: 'Normal',
+      
+    }} 
+    > No Skills Yet</h3>;
   }
 
   return (
@@ -39,14 +51,42 @@ const SkillsList = ({ skills, isLoggedInUser = false }) => {
           skills.map((skill) => (
             <div key={skill} className="col-12 col-xl-6">
               <div className="card mb-3">
-                <h4 className="card-header bg-dark text-light p-2 m-0 display-flex align-center">
+                <h4 className="card-header bg-dark text-light p-2 m-0 display-flex align-center" 
+                style={{ 
+                  color:'#71c9e9',
+                  marginLeft:'500px',
+                  padding:'5px',
+                  paddingLeft: '1000',
+                  paddingTop: '20px',
+                  fontSize: '20px',
+                  fontWeight: 'bold',
+                  
+                }} 
+                 
+                >
                   <span>{skill}</span>
                   {isLoggedInUser && (
                     <button
                       className="btn btn-sm btn-danger ml-auto"
                       onClick={() => handleRemoveSkill(skill)}
+                      style={{
+                        height: '40px',
+                        width: '50px',
+                        marginLeft: '10px',
+                        color: 'white',
+                        backgroundColor: '#314b98',
+                        borderRadius: '3px',
+
+                      }}
+              
                     >
-                      X
+                    <grid 
+                    size="medium"
+                    variant= "Filled"
+                    color= "white"
+                    > 
+                    <DeleteIcon /> 
+                    </grid>
                     </button>
                   )}
                 </h4>

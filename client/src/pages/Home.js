@@ -2,7 +2,12 @@ import React, {useState}from 'react';
 import { useQuery } from '@apollo/client';
 import TherapistsCard from '../components/therapistsCard'
 import SearchCard from '../components/searchCard';
+
 import SigninButton from '../components/signinButton' 
+import Picture from './../images/TherapistFinderSignBlack.png'
+import Picture2 from './../images/TherapistFinderSignWhite.png'
+
+import Banner from './../images/therapistUSA3.png'
 
 
 
@@ -79,10 +84,20 @@ const Home = () => {
       
     <Box sx={{
            boxShadow: 12,
+           height: '2500px',
            backgroundColor: theme.palette.primary, 
            color: '#fff',
            borderRadius:15, 
            p: 2 }}>
+            {/*  <box boxShadow={12} height= '95%'> */}
+             <img src= {Banner} alt="USA Banner"
+                style={{
+                  marginTop: '50px',
+                  width:'95%',
+                  marginLeft: '30px',
+                  boxShadow:3, 
+                }}/>
+          
 
       <Grid container spacing={3} justify="center">
       <Box sx={{
@@ -94,13 +109,13 @@ const Home = () => {
             </Box> 
         <Grid xs={8} p={5}>
         <Card>
-            <CardContent sx = {{backgroundColor:  '#636aa4'}}>
+            <CardContent sx = {{backgroundColor:  '#636aa4', height: '1940px',}}>
               <Box sx= {{
               display:'flex',
               backgroundColor: '#636aa4',
               flexDirection:'column',
               width: 660,
-              height:740,
+              height: '1900px',
               boxShadow: 15,
               borderRadius:15, 
           }} >
@@ -132,8 +147,9 @@ const Home = () => {
           <Box sx= {{
             display:'flex', 
             flexDirection:'column',
+            marginTop: '15px',
             width: 300,
-            height:760,
+            height:600,
             boxShadow: 10,
             borderRadius:10, 
             p: 1
@@ -143,6 +159,34 @@ const Home = () => {
             formState= {formState}
             handleInputChange= {handleInputChange}/>
           </Box>
+
+         <Grid>
+          <box
+            sx={{
+              display:'flex', 
+              flexDirection:'column',
+              marginTop: '15px',
+              width: 300,
+              height:800,
+              boxShadow: 10,
+              borderRadius:10, 
+              p: 1
+                  }}>
+                <img src= {Picture} alt="Therapist Finder Sign"  
+                style={{
+                  marginTop: '50px',
+                  width:'260',
+                  height: '260px',
+                }}/>
+                <img src= {Picture2} alt="Therapist Finder Sign 2" 
+                style={{
+                  marginTop: '50px',
+                  width:'260',
+                  height: '260px',
+                }}/>
+          </box>
+          </Grid> 
+
         </Grid>
       </Grid>
     </Box>

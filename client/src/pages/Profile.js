@@ -58,6 +58,7 @@ const Profile = () => {
 
   return (
     <div>
+    <div>
       <h2 className="card-header"
       style={{ 
         marginLeft: '500px',
@@ -67,7 +68,7 @@ const Profile = () => {
         fontSize: '24px',
         color: '#fff',
         fontWeight: 'Normal',
-      }}>
+      }} >
         {profileId ? `${profile.name}'s` : 'Your'} friends have endorsed these
         skills...
       </h2>
@@ -76,6 +77,7 @@ const Profile = () => {
         <SkillsList
           skills={profile.skills}
           isLoggedInUser={!profileId && true}
+         
         />
       )}
 
@@ -83,6 +85,8 @@ const Profile = () => {
         <SkillForm profileId={profile._id} />
       </div>
     </div>
+   </div>
+  
   );
 };
 

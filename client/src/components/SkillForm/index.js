@@ -6,6 +6,8 @@ import { ADD_SKILL } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
+
+
 const SkillForm = ({ profileId }) => {
   const [skill, setSkill] = useState('');
 
@@ -27,7 +29,23 @@ const SkillForm = ({ profileId }) => {
 
   return (
     <div>
-      <h4>Add a therapist here.</h4>
+      <button
+      style={{ 
+        marginLeft:'500px',
+        padding:'5px',
+        width: '200px',
+        height: '50px',
+        paddingLeft: '1000',
+        paddingTop: '20px',
+        fontSize: '18px',
+        fontWeight: 'Normal',
+        backgroundColor: '#e06c91',
+        borderRadius: '7px',
+        '&:hover':{
+                backgroundColor: '#636aa4',
+              }
+      }}>
+        Add a therapist here.</button>
 
       {Auth.loggedIn() ? (
         <form
@@ -36,6 +54,16 @@ const SkillForm = ({ profileId }) => {
         >
           <div className="col-12 col-lg-9">
             <input
+            style={{ 
+              width: '40%',
+              marginLeft:'500px',
+              marginTop:'20px',
+              marginBottom: '20px',
+              padding:'5px',
+              paddingLeft: '1000',
+              paddingTop: '20px',
+             
+            }} 
               placeholder="Endorse some skills..."
               value={skill}
               className="form-input w-100"
@@ -44,7 +72,23 @@ const SkillForm = ({ profileId }) => {
           </div>
 
           <div className="col-12 col-lg-3">
-            <button className="btn btn-info btn-block py-3" type="submit">
+            <button className="btn btn-info btn-block py-3" type="submit"
+            style={{ 
+              marginLeft:'500px',
+              padding:'5px',
+              width: '200px',
+              height: '50px',
+              paddingLeft: '1000',
+              paddingTop: '20px',
+              fontSize: '18px',
+              fontWeight: 'Normal',
+              backgroundColor: '#e06c91',
+              borderRadius: '7px',
+              '&:hover': {
+              backgroundColor: '#636aa4',
+              }
+            }} 
+            >
               Endorse Skill
             </button>
           </div>
@@ -55,7 +99,16 @@ const SkillForm = ({ profileId }) => {
           )}
         </form>
       ) : (
-        <p>
+        <p
+        style={{ 
+          marginLeft:'500px',
+          padding:'5px',
+          paddingLeft: '1000',
+          paddingTop: '20px',
+          fontSize: '18px',
+          fontWeight: 'Normal',
+        }}
+        >
           You need to be logged in to add a therapist. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
