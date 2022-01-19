@@ -2,7 +2,10 @@ import React, {useState}from 'react';
 import { useQuery } from '@apollo/client';
 import TherapistsCard from '../components/therapistsCard'
 import SearchCard from '../components/searchCard';
+
 import SigninButton from '../components/signinButton' 
+import Picture from './../images/TherapistFinderSignBlack.png'
+import Picture2 from './../images/TherapistFinderSignWhite.png'
 
 
 
@@ -145,6 +148,34 @@ const Home = () => {
             formState= {formState}
             handleInputChange= {handleInputChange}/>
           </Box>
+
+         <Grid>
+          <box
+            sx={{
+              display:'flex', 
+              flexDirection:'column',
+              marginTop: '15px',
+              width: 300,
+              height:800,
+              boxShadow: 10,
+              borderRadius:10, 
+              p: 1
+                  }}>
+                <img src= {Picture} alt="Therapist Finder Sign"  
+                style={{
+                  marginTop: '50px',
+                  width:'260',
+                  height: '260px',
+                }}/>
+                <img src= {Picture2} alt="Therapist Finder Sign 2" 
+                style={{
+                  marginTop: '50px',
+                  width:'260',
+                  height: '260px',
+                }}/>
+          </box>
+          </Grid> 
+
         </Grid>
       </Grid>
     </Box>
