@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import Joe from '../images/Joe.png'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 // import HealthAndSafetyIcon from "@mui/icon-materials/HealthAndSafetyIcon"
 import { useQuery } from '@apollo/client';
 import { QUERY_THERAPIST } from '../utils/queries';
@@ -79,22 +80,27 @@ let TherapistPage = () => {
                               
                     }}>
                                 <CardContent> 
-                                    <Box sx={{
+                                    <Box sx={{ 
+                                        p:2
                                 }}>
                                     
                             <Typography
                                 variant="h1">
                                 {data.therapist.first} {data.therapist.last}
                             </Typography>  
-
-                            <Typography 
-                            variant="h1">{data.therapist.specialty}
-                            </Typography>
-
-                            <Typography 
-                            variant="h1">{data.therapist.location}</Typography>
-                             <Typography variant="h1">https://aca-prod.accela.com/MILARA/GeneralProperty/PropertyLookUp.aspx?isLicensee=Y&TabName=APO</Typography>
-
+                            <Box sx={{mt:2}}>
+                                <Typography 
+                                variant="h1">{data.therapist.specialty}
+                                </Typography>
+                            </Box>
+                            <Box sx={{mt:2}}>
+                                <Typography 
+                                variant="h1">{data.therapist.location}
+                                </Typography>
+                            </Box>
+                            <Box sx={{mt:2}}>
+                             <Typography variant="h1" ><a href="https://aca-prod.accela.com/MILARA/GeneralProperty/PropertyLookUp.aspx?isLicensee=Y&TabName=APO">Lara Link</a></Typography>
+                            </Box>
 
                             <Button 
                             sx= {{
@@ -116,7 +122,9 @@ let TherapistPage = () => {
                               }
                             }}>
 
-                                Go Back
+                                <Link  to="/">
+                                                Go Back
+                                </Link>
                             
                             </Button>
                             </Box>

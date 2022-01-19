@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Auth from '../../utils/auth';
 import Logo from '../../images/TherapistFinderProject.png'
 import Box from '@mui/material/Box';
-import '@fontsource/roboto/300.css';
+// import '@fontsource/roboto/300.css';
 
 
 /* import { shadows } from '@mui/system';

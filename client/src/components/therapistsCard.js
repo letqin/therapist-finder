@@ -4,6 +4,7 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { fontWeight } from '@mui/system';
 // import '@fontsource/roboto/300.css'
@@ -49,6 +50,12 @@ const TherapistsCard = (props)=> {
                     
                     >{props.data.first} {props.data.last}</Typography>
                 </Link>
+                <Box sx ={{
+                    pt:2,
+                    pb:2
+                }}>
+                <Typography variant="h2">{props.data.specialty}</Typography></Box>
+                <Typography variant= "h2">{props.data.location}</Typography>
             </CardContent>
             <CardActions sx={{
                  borderRadius: borderRadiusButtom

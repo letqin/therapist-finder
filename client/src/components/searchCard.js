@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-
 
 
 const SearchCard = (props) =>{
@@ -69,9 +67,12 @@ const SearchCard = (props) =>{
             autoComplete="off"
             >
                 <TextField 
-                id="standard-basic" 
-                label="Standard" 
-                variant="standard" />
+                id="specialty" 
+                label="Specialty" 
+                variant="outlined" 
+                name="specialty"
+                value={props.formState.specialty}
+                onChange={props.handleInputChange}/>
             </CardContent>
             <CardContent 
             component="form"
@@ -82,31 +83,9 @@ const SearchCard = (props) =>{
             autoComplete="off"
             >
                 <TextField 
-                id="standard-basic" l
-                abel="Standard" 
-                variant="standard"/>
-            </CardContent>
-            <CardContent>
-                <Button
-                /* className="btn btn-lg btn-light m-2" */
-                onClick= {props.handleSearchSubmit}
-                
-              sx= {{
-                width: '200px',
-                
-                color:'white',
-                backgroundColor: '#e06c91',
-                border: 1,
-                borderRadius: '7px',
-                borderColor:'#e06c91',
-                boxShadow: '3',
-              '&:hover': {
-                backgroundColor: '#636aa4',
-                border: 1,
-                borderRadius: 10,
-                borderColor:'#e06c91',
-                
-              }}}>Search</Button>
+                id="location" label="Location" 
+                variant="outlined" name = "location" value={props.formState.location}
+                onChange={props.handleInputChange}/>
             </CardContent>
         </Card>
     )

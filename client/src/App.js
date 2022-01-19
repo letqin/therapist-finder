@@ -72,8 +72,8 @@ const theme = createTheme({
       fontSize:15
     },
     h2 :{
-      
-      fontSize: 7
+      color:"white",
+      fontSize: 12
     }
   },
   palette: {
