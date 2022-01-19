@@ -15,6 +15,7 @@ const SearchCard = (props) =>{
             flexDirection: 'column',
             alignItems: 'center',
             m: 2,
+            marginTop: '10px',
             backgroundColor: '#636aa4', 
             fontWeight: 'bold',
             height:740,
@@ -92,7 +93,7 @@ const SearchCard = (props) =>{
                 
               sx= {{
                 width: '200px',
-                marginTop: '30px',
+                marginTop: '70px',
                 color:'white',
                 backgroundColor: '#e06c91',
                 border: 1,

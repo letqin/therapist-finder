@@ -5,7 +5,8 @@ import Button from '@mui/material/Button';
 import Auth from '../../utils/auth';
 import Logo from '../../images/TherapistFinderProject.png'
 import Box from '@mui/material/Box';
-// import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/300.css';
+
 
 /* import { shadows } from '@mui/system';
 import Typography from '@mui/material/Typography'; */
@@ -26,9 +27,11 @@ const Header = () => {
            TherapistFinder
           </h1> */}
           <Box sx={{
-            mr:10,
-            marginTop: '3%',
-            width: '100%',
+            marginTop: '5%',
+            marginLeft: '10%',
+            marginBottom: '3%',
+            marginRight: '0',
+            width: '80%',
             height: '100%',
             display: 'inline-flex',
             flexDirection: 'row',
@@ -38,13 +41,23 @@ const Header = () => {
           <Box>
           {Auth.loggedIn() ? (
             <>
-              
-              <Link className="btn btn-lg btn-primary m-2" underline="none" to="/me">
+        
+              <Link className="btn btn-lg btn-primary m-2" underline="none" to="/me"
+              style={{
+                color: 'white', 
+                fontSize: '24px',
+                fontWeight: 'Normal',
+                paddingRight:'20px',
+                paddingTop: '5px',
+              }}
+              >
                 View My Profile
               </Link>
+             
 
               <Button className="btn btn-lg btn-light m-2" onClick={logout} size= 'large'
               sx= {{
+                
                 color:'white',
                 backgroundColor: '#e06c91',
                 border: 1,
@@ -61,6 +74,7 @@ const Header = () => {
                 Logout
                 
               </Button>
+              
 
             </>
           ) : (
