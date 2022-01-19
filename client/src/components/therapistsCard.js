@@ -6,8 +6,6 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { fontWeight } from '@mui/system';
-// import '@fontsource/roboto/300.css'
 
 
 const TherapistsCard = (props)=> {
