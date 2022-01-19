@@ -6,6 +6,7 @@ import SearchCard from '../components/searchCard';
 import SigninButton from '../components/signinButton' 
 import Picture from './../images/TherapistFinderSignBlack.png'
 import Picture2 from './../images/TherapistFinderSignWhite.png'
+
 import Banner from './../images/therapistUSA3.png'
 
 
@@ -83,7 +84,7 @@ const Home = () => {
       
     <Box sx={{
            boxShadow: 12,
-           height: '3000px',
+           height: '2500px',
            backgroundColor: theme.palette.primary, 
            color: '#fff',
            borderRadius:15, 

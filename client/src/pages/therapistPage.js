@@ -21,33 +21,46 @@ let TherapistPage = () => {
     console.log(data, "line")
     // const therapist = data.therapist || "whoops";
 //   console.log(therapist)
-    const SaucyBoi = () =>{ return (
+
+
+    const SaucyBoi = () =>{ 
+        
+        return (
+
         <Card sx={{
             backgroundColor: '#636aa4',
+            marginRight: '0'
         }}>
-            <CardContent>
+        <CardContent>
         <img src= { Joe } alt="therapist"/>
         </CardContent>
         </Card>
-        )
         
+        )
     }
+
     return (
-        <main>
-            <Grid container spacing={2}>
+
+        <main
+        style={{
+            marginRight:'200px',
+        }}
+        >
+
+            <Grid container spacing={1}>
                 <Grid  xs={8}>
                 {/* <HealthAndSafetyIcon /> */}
                 <Box sx={{
                     display:'flex',
-                    justifyContent: 'center'
-                }}>
+                    justifyContent: 'center'}}>
                     <SaucyBoi />
                 </Box>
                 </Grid>
                 <Grid xs={4}>
-                    <Box sx={{ 
-                        m: 5,
-                    }}>
+                    <Box style={{
+                        m:1
+                        }}>
+
                     {loading ? 
                         (
                             <div>Loading...</div>
@@ -55,21 +68,24 @@ let TherapistPage = () => {
                             
                             <>
                             <Card sx={{
-                        backgroundColor: '#636aa4',
-                        color: 'white',
+                            
+                                backgroundColor: '#636aa4',
+                                color: 'white',
+                              
                     }}>
                                 <CardContent> 
-                                    <Box sx={{ 
-                                    m: 5,
+                                    <Box sx={{
                                 }}>
                                     
                             <Typography
                                 variant="h1">
                                 {data.therapist.first} {data.therapist.last}
-                            </Typography>                                
-                           
+                            </Typography>  
+
                             <Typography 
-                            variant="h1">{data.therapist.specialty}</Typography>
+                            variant="h1">{data.therapist.specialty}
+                            </Typography>
+
                             <Typography 
                             variant="h1">{data.therapist.location}</Typography>
                              <Typography variant="h1">https://aca-prod.accela.com/MILARA/GeneralProperty/PropertyLookUp.aspx?isLicensee=Y&TabName=APO</Typography>
@@ -83,8 +99,11 @@ let TherapistPage = () => {
                     </Box>
                 </Grid>
             </Grid>
-    
+                    
         </main>
+          
+    
+        
     )
 }
 

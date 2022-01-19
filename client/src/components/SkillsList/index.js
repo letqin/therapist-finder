@@ -5,6 +5,7 @@ import { REMOVE_SKILL } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+
 const SkillsList = ({ skills, isLoggedInUser = false }) => {
   const [removeSkill, { error }] = useMutation(REMOVE_SKILL, {
     update(cache, { data: { removeSkill } }) {
@@ -67,27 +68,27 @@ const SkillsList = ({ skills, isLoggedInUser = false }) => {
                   {isLoggedInUser && (
                     <button
                       className="btn btn-sm btn-danger ml-auto"
-                      onClick={() => handleRemoveSkill(skill)
-                      }
-                      endIcon = {<DeleteIcon />}
-                      size="medium"
-                      variant= "Filled"
-                      color= "white"
-                      
+                      onClick={() => handleRemoveSkill(skill)}
                       style={{
                         height: '30px',
                         width: '50px',
                         marginLeft: '10px',
                         color: 'white',
-                        fontSize: '18px',
+                        /* fontSize: '18px',
                         fontWeight: 'Normal',
                         backgroundColor: '#314b98',
-                        borderRadius: '3px',
+                        borderRadius: '3px', */
 
                       }}
               
                     >
-                      X
+                    <grid 
+                    size="medium"
+                    variant= "Filled"
+                    color= "white"
+                    > 
+                    <DeleteIcon /> 
+                    </grid>
                     </button>
                   )}
                 </h4>
