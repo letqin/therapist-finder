@@ -5,7 +5,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-// import '@fontsource/roboto/300.css';
+import { fontWeight } from '@mui/system';
+// import '@fontsource/roboto/300.css'
 
 
 const TherapistsCard = (props)=> {
@@ -28,7 +29,6 @@ const TherapistsCard = (props)=> {
             display: "flex",
             borderRadius:borderRadiusTop , 
             backgroundColor: '#636aa4',
-            color: 'white',
             paddingLeft: '20px',
             paddingTop: '20px',
             
@@ -37,18 +37,31 @@ const TherapistsCard = (props)=> {
             <CardContent>
                 <Link className="btn btn-lg btn-primary m-2" underline="none" to={"/therapistPage/" + props.data._id}>
 
-                    <Typography variant= "h1">{props.data.first} {props.data.last}</Typography>
+                    <Typography variant="body1" gutterBottom
+                    style={{ 
+                        marginTop: '10px',
+                        marginLeft: '10px',
+                        fontSize: '20px',
+                        fontFamily: 'sans-serif',
+                        color: '#fff',
+                        fontWeight: 'normal',
+                    }}
+                    
+                    >{props.data.first} {props.data.last}</Typography>
                 </Link>
             </CardContent>
             <CardActions sx={{
                  borderRadius: borderRadiusButtom
             }}>
                 <Button
-                /* variant='text' 
-                color= 'white' 
-                fontSize= '10px' */
-                >
-                    Learn More
+                style={{
+                    color:'#314b98',
+                    marginTop: '10px',
+                    fontSize: '10px',
+                    fontWeight:'normal',
+                    fontStyle: 'italic',
+                }}>
+                    Learn more
                 </Button>
             </CardActions>
         </Card>

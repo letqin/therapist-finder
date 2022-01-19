@@ -79,6 +79,7 @@ const Home = () => {
       
     <Box sx={{
            boxShadow: 12,
+           height: '2000px',
            backgroundColor: theme.palette.primary, 
            color: '#fff',
            borderRadius:15, 
@@ -94,13 +95,13 @@ const Home = () => {
             </Box> 
         <Grid xs={8} p={5}>
         <Card>
-            <CardContent sx = {{backgroundColor:  '#636aa4'}}>
+            <CardContent sx = {{backgroundColor:  '#636aa4', height: '1940px',}}>
               <Box sx= {{
               display:'flex',
               backgroundColor: '#636aa4',
               flexDirection:'column',
               width: 660,
-              height:740,
+              height: '1900px',
               boxShadow: 15,
               borderRadius:15, 
           }} >
@@ -132,8 +133,9 @@ const Home = () => {
           <Box sx= {{
             display:'flex', 
             flexDirection:'column',
+            marginTop: '15px',
             width: 300,
-            height:760,
+            height:600,
             boxShadow: 10,
             borderRadius:10, 
             p: 1

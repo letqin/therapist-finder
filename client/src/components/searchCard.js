@@ -93,7 +93,7 @@ const SearchCard = (props) =>{
                 
               sx= {{
                 width: '200px',
-                marginTop: '70px',
+                
                 color:'white',
                 backgroundColor: '#e06c91',
                 border: 1,
