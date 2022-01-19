@@ -24,7 +24,7 @@ let TherapistPage = () => {
                         ) : (
                             
                                     <>
-                                        <Typography variant="h1">{therapists[0]}</Typography>
+                                        <Typography variant="h1">How </Typography>
                                         <Typography variant="h1"></Typography>
                                         <Typography variant="h1"></Typography>
                                         <Typography variant="h1"></Typography>
