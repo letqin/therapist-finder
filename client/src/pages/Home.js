@@ -6,6 +6,7 @@ import SearchCard from '../components/searchCard';
 import SigninButton from '../components/signinButton' 
 import Picture from './../images/TherapistFinderSignBlack.png'
 import Picture2 from './../images/TherapistFinderSignWhite.png'
+import Banner from './../images/therapistUSA3.png'
 
 
 
@@ -82,11 +83,20 @@ const Home = () => {
       
     <Box sx={{
            boxShadow: 12,
-           height: '2000px',
+           height: '3000px',
            backgroundColor: theme.palette.primary, 
            color: '#fff',
            borderRadius:15, 
            p: 2 }}>
+            {/*  <box boxShadow={12} height= '95%'> */}
+             <img src= {Banner} alt="USA Banner"
+                style={{
+                  marginTop: '50px',
+                  width:'95%',
+                  marginLeft: '30px',
+                  boxShadow:3, 
+                }}/>
+          
 
       <Grid container spacing={3} justify="center">
       <Box sx={{
