@@ -29,10 +29,15 @@ let TherapistPage = () => {
 
         <Card sx={{
             backgroundColor: '#636aa4',
-            marginRight: '0'
+            
         }}>
         <CardContent>
-        <img src= { Joe } alt="therapist"/>
+        <img src= { Joe } alt="therapist"
+        style= {{
+            marginLeft: '200px',
+        }}
+        
+        />
         </CardContent>
         </Card>
         
@@ -43,7 +48,7 @@ let TherapistPage = () => {
 
         <main
         style={{
-            marginRight:'200px',
+            marginRight:'400px',
         }}
         >
 
@@ -68,9 +73,9 @@ let TherapistPage = () => {
                             
                             <>
                             <Card sx={{
-                            
                                 backgroundColor: '#636aa4',
                                 color: 'white',
+                                
                               
                     }}>
                                 <CardContent> 
@@ -89,7 +94,31 @@ let TherapistPage = () => {
                             <Typography 
                             variant="h1">{data.therapist.location}</Typography>
                              <Typography variant="h1">https://aca-prod.accela.com/MILARA/GeneralProperty/PropertyLookUp.aspx?isLicensee=Y&TabName=APO</Typography>
-                            <Button variant="outline">Go Back</Button>
+
+
+                            <Button 
+                            sx= {{
+                                marginTop: '20px',
+                                fontSize: '30',
+                                fontWeight: 'bold',
+                                width: 160,
+                                
+                                color:'#fff',
+                                backgroundColor: '#e06c91',
+                                border: 1,
+                                borderRadius: '7px',
+                                borderColor:'#e06c91',
+                                boxShadow: '3',
+                                '&:hover': {
+                                backgroundColor: '#636aa4',
+                                borderColor:'#e06c91',
+                                
+                              }
+                            }}>
+
+                                Go Back
+                            
+                            </Button>
                             </Box>
                             </CardContent>
                             </Card>

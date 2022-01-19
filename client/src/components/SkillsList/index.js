@@ -70,14 +70,12 @@ const SkillsList = ({ skills, isLoggedInUser = false }) => {
                       className="btn btn-sm btn-danger ml-auto"
                       onClick={() => handleRemoveSkill(skill)}
                       style={{
-                        height: '30px',
+                        height: '40px',
                         width: '50px',
                         marginLeft: '10px',
                         color: 'white',
-                        /* fontSize: '18px',
-                        fontWeight: 'Normal',
                         backgroundColor: '#314b98',
-                        borderRadius: '3px', */
+                        borderRadius: '3px',
 
                       }}
               
