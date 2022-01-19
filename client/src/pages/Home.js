@@ -122,12 +122,8 @@ const Home = () => {
                 ) : (
                   therapists
                   .filter(therapist => {
-                     if(therapist.first.includes(formState.first)) return therapist.first.includes(formState.first)
-                      if(therapist.last.includes(formState.last)) return therapist.last.includes(formState.last)
-                      if(therapist.specialty.includes(formState.specialty)) 
-                      return therapist.specialty.includes(formState.specialty)
-                      if(therapist.location.includes(formState.location)) 
-                      return therapist.location.includes(formState.location)
+                    return therapist.first.includes(formState.first)
+                     
                   
                   })
                   .map((therapist, i) => {
