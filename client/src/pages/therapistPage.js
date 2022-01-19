@@ -19,8 +19,6 @@ let TherapistPage = () => {
 
     const theme = useTheme();
     console.log(data, "line")
-    // const therapist = data.therapist || "whoops";
-//   console.log(therapist)
 
 
     const SaucyBoi = () =>{ 
