@@ -122,7 +122,13 @@ const Home = () => {
                 ) : (
                   therapists
                   .filter(therapist => {
-                    return therapist.first.includes(formState.first)
+
+                    let first = formState.first == "" || therapist.first.includes(formState.first)
+                    let last = formState.last == "" ||  therapist.last.includes(formState.last)
+                    let specialty = formState.specialty == "" ||  therapist?.specialty?.includes(formState.specialty)
+                    let location = formState.location == "" ||  therapist?.location?.includes(formState.location)
+                    console.log(first, last, specialty, location)
+                    return first && last && specialty && location
                      
                   
                   })
