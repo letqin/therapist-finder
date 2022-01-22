@@ -7,8 +7,6 @@ const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 const db = require('./config/connection');
 
-const seedHandler = require('./seeders/seed');
-
 const PORT = process.env.PORT || 3001;
 const app = express();
 seedHandler();

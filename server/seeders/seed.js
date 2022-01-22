@@ -3,7 +3,7 @@ const { Profile, Therapist } = require('../models');
 const profileSeeds = require('./profileSeeds.json');
 const therapistSeeds = require('./therapist-seeds.json')
 
-let seedHandler = () => {db.once('open', async () => {
+db.once('open', async () => {
   try {
     await Profile.deleteMany({});
     await Profile.create(profileSeeds);
@@ -14,6 +14,6 @@ let seedHandler = () => {db.once('open', async () => {
   } catch (err) {
     throw err;
   }
-});}
+});
 
 module.exports = seedHandler
