@@ -1,12 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';    
+import React from 'react';  
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-
+import Link from '@mui/material/Link';
 
 const TherapistsCard = (props)=> {
     console.log(props.data)
@@ -34,7 +33,7 @@ const TherapistsCard = (props)=> {
             }}
             >
             <CardContent>
-                <Link className="btn btn-lg btn-primary m-2" underline="none" to={"/therapistPage/" + props.data._id}>
+                <Link className="btn btn-lg btn-primary m-2" underline="none" href={"/therapistPage/" + props.data._id}>
 
                     <Typography variant="body1" gutterBottom
                     style={{ 
@@ -44,8 +43,7 @@ const TherapistsCard = (props)=> {
                         fontFamily: 'sans-serif',
                         color: '#fff',
                         fontWeight: 'normal',
-                    }}
-                    
+                    }}                
                     >{props.data.first} {props.data.last}</Typography>
                 </Link>
                 <Box sx ={{
@@ -58,16 +56,17 @@ const TherapistsCard = (props)=> {
             <CardActions sx={{
                  borderRadius: borderRadiusButtom
             }}>
-                <Button
-                style={{
+                <Link
+                sx={{
                     color:'#314b98',
                     marginTop: '10px',
                     fontSize: '10px',
                     fontWeight:'normal',
                     fontStyle: 'italic',
-                }}>
-                    Learn more
-                </Button>
+                }}
+                href={"/therapistPage/" + props.data._id}>
+                        Learn more
+                </Link>
             </CardActions>
         </Card>
     )
